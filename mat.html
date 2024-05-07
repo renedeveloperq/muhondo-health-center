@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maternity Appointment Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: green;
+        box-shadow: 0 0 20px bisque;
+    }
+    .top-left-button {
+      position: fixed;
+      top: 20px; 
+      left: 20px; 
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+</style>
+</head>
+<body><a href="index.html" class="top-left-button">home</a>
+    <form action="#" method="post">
+        <h2>Maternity Appointment Form</h2>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email</label><br>
+        <input type="email"><br><br>
+        <label for="">MATERNITY SERVICE</label>
+        <select name="" id="">
+            <option value="">give birth</option>
+            <option value="">test pregnant woman</option>
+        </select><br><br>
+        <label for="">number of time you give birth</label><br>
+        <input type="number"><br><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+        <div id="ageWarning" style="display: none; color: red;">Please enter a valid age (15 or above).</div><br>
+        <input type="submit" value="Confirm Appointment">
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            var age = document.getElementById('age').value;
+            if (age < 15) {
+                document.getElementById('ageWarning').style.display = 'block';
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

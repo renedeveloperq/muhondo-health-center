@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment Form</title>
+<style>
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    form label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="date"],
+    form select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    form button {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<form id="appointment-form">
+    <label for="name">Patient Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="dob">Year of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <label for="service">Service:</label>
+    <select id="service" name="service" required>
+        <option value="" disabled selected>Select Service</option>
+        <option value="dental">Dental</option>
+        <option value="radiography">Radiography</option>
+        <option value="maternity">Maternity</option>
+        <option value="laboratory">Laboratory Test</option>
+    </select>
+
+    <button type="submit">Confirm Appointment</button>
+</form>
+
+</body>
+</html>
